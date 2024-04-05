@@ -18,7 +18,7 @@ var DefaultLogoURL string = "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aq
 // uses ImageMagick's convert command for that.
 func ReadLogo(fp io.Reader, filename, field string, maxMB int) (b Logo, err error) {
 	var bb []byte
-	bb, err = ConvertImage("256x", filename, field, "png", 2, fp)
+	bb, err = ConvertImage("256x", filename, field, "png", 1, fp)
 	return Logo(bb), err
 }
 
